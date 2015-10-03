@@ -1,5 +1,5 @@
 describe('mergeSort', function() {
-	var mergeSort = require('../lib/mergeSort.js')
+	var mergeSort = require('../lib/merge-sort.js')
 	describe('incomplete and insufficient arguments', function() {
 		it('should return false from a non array call', function() {
 			expect(mergeSort()).toBe(false)
