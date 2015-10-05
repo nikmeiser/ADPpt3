@@ -1,5 +1,5 @@
-describe('breadth first with stack', function() {
-    var search = require('../lib/breadth-first-with-stack')
+describe('depth first traversals', function() {
+    var traverse = require('../lib/depth-first-order-traversal')
     var tree = {
         levels: 4,
         head: {
@@ -33,19 +33,9 @@ describe('breadth first with stack', function() {
             }
         }
     }
-    describe('invalid trees', function() {
-        it('should return false from empty call', function() {
-            expect(search()).toEqual(false)
-        })
-        it('should return false from invalid tree', function() {
-            expect(search({
-                foo: 'bar'
-            })).toEqual(false)
-        })
-    })
-    describe('tree traversal', function() {
-        it('should properly return node values', function() {
-            expect(search(tree)).toEqual('10\n5\n12\n4\n7\n2\n6\n8\n')
+    describe('should traverse in order', function() {
+        it('should return array', function() {
+            expect(traverse(tree)).toEqual([8, 4, 5, 7, 10, 2, 12, 6])
         })
     })
 })

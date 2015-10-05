@@ -1,4 +1,4 @@
-describe('fibbonaci with looping', function() {
+describe('fibbonaci with recursion', function() {
     var fib = require('../lib/fibbonaci-recursion')
     describe('insufficient call', function() {
         it('should return false from non number call', function() {
